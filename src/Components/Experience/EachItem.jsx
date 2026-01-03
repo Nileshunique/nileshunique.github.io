@@ -72,7 +72,7 @@ export const EachItem = ({
 
       {/* Timeline Dot */}
       <motion.div
-        className="absolute -left-[0.55rem] mt-2 bg-yellow-400 w-4 h-4 rounded-full drop-shadow-glow-yellow"
+        className="absolute -left-[0.48rem] mt-2 bg-yellow-400 w-4 h-4 rounded-full drop-shadow-glow-yellow"
         initial="hidden"
         whileInView={["visible", "pulse"]}
         viewport={{ once: true }}
