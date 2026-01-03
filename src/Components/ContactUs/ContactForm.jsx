@@ -291,11 +291,10 @@ function ContactForm() {
           {/* Status Message */}
           {status && (
             <motion.div
-              className={`mt-6 p-4 rounded-lg ${
-                status.includes("successfully")
+              className={`mt-6 p-4 rounded-lg ${status.includes("successfully")
                   ? "bg-green-800 border border-green-600 text-green-200"
                   : "bg-red-800 border border-red-600 text-red-200"
-              }`}
+                }`}
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4 }}
@@ -307,7 +306,7 @@ function ContactForm() {
 
         {/* Footer */}
         <motion.div
-          className="bg-zinc-800 bg-opacity-50 px-8 py-4 border-t border-zinc-700 mt-6 rounded-lg"
+          className="bg-zinc-800/50 px-8 py-4 border-t border-zinc-700 mt-6 rounded-lg"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.6 }}

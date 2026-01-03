@@ -4,7 +4,7 @@ import Typewriter from "../../SharedComponent/Typewriter/Typewriter";
 import { handleCall, scrollToSection } from "../../utils";
 import { BsWhatsapp } from "react-icons/bs";
 import { FaFacebookF, FaLinkedinIn, FaPhoneAlt } from "react-icons/fa";
-import userProfile from "./../../constant/constant";
+import userProfile from "./../../constant/constant.jsx";
 
 function DevInfo() {
   const {

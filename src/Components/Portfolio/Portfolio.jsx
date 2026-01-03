@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import { motion } from "framer-motion";
-import userProfile from "../../constant/constant";
+import userProfile from "../../constant/constant.jsx";
 import Heading from "../../SharedComponent/Heading/Heading";
 import { handleNavigate } from "../../utils";
 
@@ -112,9 +112,8 @@ const ProjectDetail = ({ item, index }) => {
 
       {/* Tech Badges */}
       <motion.div
-        className={`flex ${
-          even ? "justify-start" : "justify-end"
-        } flex-wrap gap-2 mb-4`}
+        className={`flex ${even ? "justify-start" : "justify-end"
+          } flex-wrap gap-2 mb-4`}
         variants={containerVariants}
       >
         {item.tech.map((tech, i) => (
@@ -136,9 +135,8 @@ const ProjectDetail = ({ item, index }) => {
         Responsibilities
       </motion.h4>
       <motion.ul
-        className={`${
-          !even ? "flex flex-col items-end" : ""
-        } space-y-2 text-gray-300`}
+        className={`${!even ? "flex flex-col items-end" : ""
+          } space-y-2 text-gray-300`}
         variants={containerVariants}
       >
         {item?.responsibilities?.map((task, i) => (
@@ -193,9 +191,8 @@ const ProjectImageDetail = ({ item }) => {
 
       {item.title && (
         <motion.div
-          className={`absolute inset-0 bg-black bg-opacity-70 flex flex-col justify-center items-center text-center p-6 ${
-            item.image ? "opacity-0" : "opacity-100"
-          } group-hover:opacity-100 transition-opacity duration-500`}
+          className={`absolute inset-0 bg-black/70 flex flex-col justify-center items-center text-center p-6 ${item.image ? "opacity-0" : "opacity-100"
+            } group-hover:opacity-100 transition-opacity duration-500`}
           initial={{ opacity: item.image ? 0 : 1 }}
           whileHover={{ opacity: 1 }}
         >

@@ -1,6 +1,6 @@
 import Heading from "../../SharedComponent/Heading/Heading";
 import { handleNavigate } from "../../utils";
-import userProfile from "../../constant/constant";
+import userProfile from "../../constant/constant.jsx";
 import { motion } from "framer-motion";
 
 function About() {

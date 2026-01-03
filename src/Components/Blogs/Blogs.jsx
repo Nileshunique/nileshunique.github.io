@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Heading from "../../SharedComponent/Heading/Heading";
-import userProfile from "../../constant/constant";
+import userProfile from "../../constant/constant.jsx";
 
 function DevToBlogFeed() {
   const { devBlogProfileLink, blogs } = userProfile;
@@ -147,7 +147,7 @@ function DevToBlogFeed() {
                       {post.tag_list.map((tag, index) => (
                         <motion.span
                           key={index}
-                          className="px-2 py-1 bg-amber-400 bg-opacity-20 text-amber-400 text-xs rounded-full border border-amber-400 border-opacity-30"
+                          className="px-2 py-1 bg-amber-400/20 text-amber-400 text-xs rounded-full border border-amber-400/30"
                           variants={contentItem}
                         >
                           #{tag}

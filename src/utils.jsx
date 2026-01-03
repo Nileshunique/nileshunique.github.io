@@ -1,4 +1,4 @@
-import userProfile from "./constant/constant";
+import userProfile from "./constant/constant.jsx";
 
 const { location, phone, email } = userProfile?.profileLinks || {};
 

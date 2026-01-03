@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import userProfile from "../../constant/constant";
+import userProfile from "../../constant/constant.jsx";
 import Heading from "../../SharedComponent/Heading/Heading";
 import { EachItem } from "../Experience/EachItem";
 
