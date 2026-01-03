@@ -1,18 +1,18 @@
-import profileImage from "../assets/images/profile-small.png";
-import profileImage2 from "../assets/images/profile-2.png";
-import EngageAi from "./../assets/images/projects/EngageAi.png";
-import Heartbeat_Design from "./../assets/images/projects/Heartbeat_Design.png";
-import PVDiagnostics from "./../assets/images/projects/PVDiagnostics.png";
-import Reblding from "./../assets/images/projects/Reblding.png";
-import Kaboodle from "./../assets/images/projects/Kaboodle.png";
+import profileImage from "../assets/images/profile-small.webp";
+import profileImage2 from "../assets/images/profile-2.webp";
+import EngageAi from "./../assets/images/projects/EngageAi.webp";
+import Heartbeat_Design from "./../assets/images/projects/Heartbeat_Design.webp";
+import PVDiagnostics from "./../assets/images/projects/PVDiagnostics.webp";
+import Reblding from "./../assets/images/projects/Reblding.webp";
+import Kaboodle from "./../assets/images/projects/Kaboodle.webp";
 import story_lego from "./../assets/images/projects/story_lego.jpeg";
-import futureagi from "./../assets/images/projects/futureagi.png";
-import miseit from "./../assets/images/projects/miseit.png";
+import futureagi from "./../assets/images/projects/futureagi.webp";
+import miseit from "./../assets/images/projects/miseit.webp";
 import responsive from "./../assets/images/icons/responsive.svg";
-import ExtraMileAward from "./../assets/certificates/Extra_Mile_Award_Q01_2025.png";
-import UdemyWebDev from "./../assets/certificates/Web_Development_Udemy_course_compeletion_2022.png";
-import NamasteDevNodeJS from "./../assets/certificates/Nameste_dev_nodeJS_compeletion.png";
-import ScalerResponsive from "./../assets/certificates/Responsive_Web_Design_Workshop_2022.png";
+import ExtraMileAward from "./../assets/certificates/Extra_Mile_Award_Q01_2025.webp";
+import UdemyWebDev from "./../assets/certificates/Web_Development_Udemy_course_compeletion_2022.webp";
+import NamasteDevNodeJS from "./../assets/certificates/Nameste_dev_nodeJS_compeletion.webp";
+import ScalerResponsive from "./../assets/certificates/Responsive_Web_Design_Workshop_2022.webp";
 import frontEnd from "./../assets/images/icons/front-end.svg";
 import backend from "./../assets/images/icons/backend.svg";
 import api from "./../assets/images/icons/api.svg";
@@ -258,17 +258,6 @@ const education = [
   },
 ];
 
-const achievements = [
-  {
-    title: "Extra Mile Award",
-    institution: "Oodles Technology",
-    duration: "26-03-2025",
-    description:
-      "Recognized for exceptional dedication, outstanding performance, and consistently going above and beyond in delivering high-quality results. Demonstrated strong problem-solving skills, teamwork, and a commitment to excellence, contributing significantly to the success of projects and organizational goals.",
-    image: "https://i.ibb.co/4dXb8h7/Extra-Mile-Award.png",
-  },
-];
-
 const certificates = [
   {
     title: "Certificate of Appreciation – Extra Mile Award",
@@ -333,7 +322,7 @@ const portfolioItems = [
         "Added analytics tracking to enhance user engagement and operational insights."
       ]
     }
-  },  
+  },
   {
     image: futureagi,
     alt: "Future AGI",
@@ -546,7 +535,6 @@ const userProfile = {
   skills,
   experience,
   education,
-  achievements,
   certificates,
   portfolioItems,
   devBlogProfileLink,
