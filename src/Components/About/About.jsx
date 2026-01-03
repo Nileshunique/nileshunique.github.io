@@ -57,7 +57,7 @@ function About() {
         <div className="flex mb-4 gap-4 flex-wrap lg:flex-nowrap">
           {/* Profile Image */}
           <motion.div
-            className="rounded-lg mx-auto max-w-md overflow-hidden"
+            className="hidden md:block rounded-lg mx-auto max-w-md overflow-hidden"
             initial={{ clipPath: "inset(0 100% 0 0)" }}
             whileInView={{ clipPath: "inset(0 0% 0 0)" }}
             transition={{ duration: 1 }}

@@ -57,7 +57,7 @@ function DevInfo() {
   return (
     <div
       id="Home"
-      className="text-white min-h-screen shadow-xl mt-8 relative overflow-hidden"
+      className="text-white min-h-fit shadow-xl mt-8 relative overflow-hidden"
     >
       {/* Animated Gradient Background */}
       <motion.div
@@ -73,12 +73,12 @@ function DevInfo() {
         style={{ backgroundSize: "200% 200%" }}
       />
 
-      <main className="relative z-10 flex flex-col md:flex-row justify-between items-center px-4 md:px-8 py-8 md:py-14">
+      <main className="relative z-10 container mx-auto max-w-7xl flex flex-col md:flex-row justify-between items-center px-4 md:px-8 py-8 md:py-14 gap-4">
         {/* Left Section */}
         <div className="max-w-lg mb-8 md:mb-0 text-center md:text-left">
           {/* Split Heading Animation */}
           <h1 className="text-4xl md:text-5xl font-bold mb-4 flex flex-wrap justify-center md:justify-start">
-            {"I'M "}
+            {"I'M"}&nbsp;
             {profileName.split("").map((char, i) => (
               <motion.span
                 key={i}
@@ -159,7 +159,7 @@ function DevInfo() {
               <motion.img
                 src={profileImage}
                 alt={profileName}
-                className="rounded-lg w-auto md:w-auto hover:drop-shadow-border relative"
+                className="min-w-[330px] min-h-[330px] rounded-lg w-auto md:w-auto hover:drop-shadow-border relative"
                 whileHover={{ scale: 1.05, rotate: 2 }}
                 transition={{ duration: 0.4 }}
               />
