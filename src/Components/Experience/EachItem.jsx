@@ -60,7 +60,7 @@ export const EachItem = ({
   image,
 }) => {
   return (
-    <div className="flex justify-between flex-row flex-wrap md:flex-nowrap relative">
+    <div className="flex justify-between flex-col md:flex-row relative">
       {/* Timeline Line */}
       <motion.div
         className="absolute left-0 top-0 bottom-0 border-l-2 border-yellow-400"
@@ -80,7 +80,7 @@ export const EachItem = ({
       />
 
       {/* Text Content */}
-      <div className="flex flex-col ml-8">
+      <div className="flex flex-col ml-8 flex-1">
         <motion.h3
           className="text-xl font-semibold"
           initial="hidden"
@@ -140,7 +140,7 @@ export const EachItem = ({
       {/* Right Image */}
       {image && (
         <motion.div
-          className="flex-shrink-0 ml-4"
+          className="flex-shrink-0 w-full pl-12 md:w-auto mt-4 md:mt-0 md:ml-4"
           variants={imageVariants}
           initial="hidden"
           whileInView="visible"
@@ -150,7 +150,7 @@ export const EachItem = ({
           <img
             src={image}
             alt={title}
-            className="h-44 object-cover rounded-lg shadow-lg"
+            className="w-full h-auto max-h-72 md:h-44 md:w-auto object-cover rounded-lg shadow-lg"
           />
         </motion.div>
       )}
