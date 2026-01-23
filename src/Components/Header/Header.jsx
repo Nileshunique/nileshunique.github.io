@@ -1,13 +1,12 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Menu, X } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import Logo from "./../../assets/images/nkLogo.webp";
 import { scrollToSection } from "../../utils";
 import resume from "./../../assets/Resume/Nilesh_Resume.pdf";
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [linksVisible, setLinksVisible] = useState(false);
 
   const links = [
     { id: "About", label: "About" },
@@ -18,11 +17,6 @@ function Header() {
     { id: "ContactMe", label: "Contact" },
     { id: "Resume", label: "Resume", link: resume },
   ];
-
-  useEffect(() => {
-    // Trigger animation after mount
-    setLinksVisible(true);
-  }, []);
 
   const linkAnimation = {
     hidden: { opacity: 0, y: -20 },
@@ -55,7 +49,7 @@ function Header() {
               <motion.li
                 key={link.id}
                 initial="hidden"
-                animate={linksVisible ? "visible" : "hidden"}
+                animate="visible"
                 variants={linkAnimation}
                 transition={{ delay: index * 0.1, duration: 0.4 }}
               >
