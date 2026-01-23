@@ -41,11 +41,12 @@ const PdfViewer = ({ src }) => {
         >
           {numPages &&
             Array.from(new Array(numPages), (_el, index) => (
-              <Page
+              <div
                 key={`page_${index + 1}`}
-                pageNumber={index + 1}
-                width={window.innerWidth * 0.9}
-              />
+                className="mb-8 last:mb-0 shadow-lg"
+              >
+                <Page pageNumber={index + 1} width={window.innerWidth * 0.9} />
+              </div>
             ))}
         </Document>
       </div>
