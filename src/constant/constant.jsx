@@ -55,15 +55,15 @@ const personalDetail = [
 
 const profileLinks = {
   facebook: "https://www.facebook.com/nileshunique/",
-  linkedin: "https://www.linkedin.com/in/nilesh-kumar-692906236/",
+  linkedin: "https://www.linkedin.com/in/nileshcodehub/",
   whatsapp: "https://wa.me/+919911148122",
   phone: "+919911148122",
   email: "nilesh.document1@gmail.com",
-  github: "https://github.com/nileshunique",
+  github: "https://github.com/nileshcodehub",
   location: "Shanti Nagar, Gurgaon, Haryana, India",
 };
 
-const devBlogProfileLink = "https://dev.to/api/articles?username=gyantocode";
+const devBlogProfileLink = "https://dev.to/api/articles?username=nileshcodehub";
 
 const services = [
   {
@@ -295,15 +295,16 @@ const certificates = [
 
 const portfolioItems = [
   {
-    "image": miseit,
-    "alt": "MiseIt AI",
-    "title": "MiseIt AI",
-    "description": "An AI-powered restaurant operations platform that helps restaurant owners and super admins manage recipes, policies, staff workflows, and daily operations with intelligent automation.",
-    "action": "See More",
-    "link": "https://miseit.ai/",
-    "projectData": {
-      "name": "MiseIt AI",
-      "tech": [
+    image: miseit,
+    alt: "MiseIt AI",
+    title: "MiseIt AI",
+    description:
+      "An AI-powered restaurant operations platform that helps restaurant owners and super admins manage recipes, policies, staff workflows, and daily operations with intelligent automation.",
+    action: "See More",
+    link: "https://miseit.ai/",
+    projectData: {
+      name: "MiseIt AI",
+      tech: [
         "ReactJS",
         "Tailwind CSS",
         "Redux Toolkit",
@@ -311,17 +312,18 @@ const portfolioItems = [
         "React Query",
         "React Ag Grid",
         "Axios",
-        "REST APIs"
+        "REST APIs",
       ],
-      "description": "A complete restaurant operations automation platform that enables owners and super admins to manage recipes, policies, staff workflows, and day-to-day operations using AI-driven features to improve efficiency and reduce manual tasks.",
-      "responsibilities": [
+      description:
+        "A complete restaurant operations automation platform that enables owners and super admins to manage recipes, policies, staff workflows, and day-to-day operations using AI-driven features to improve efficiency and reduce manual tasks.",
+      responsibilities: [
         "Developed scalable UI components for Super Admin and Restaurant Owner dashboards.",
         "Integrated REST APIs for restaurant management, workflows, recipes, and policy features.",
         "Implemented responsive UI based on Figma designs with optimized user experience.",
         "Created role-based layouts and interactions for multi-level access control.",
-        "Added analytics tracking to enhance user engagement and operational insights."
-      ]
-    }
+        "Added analytics tracking to enhance user engagement and operational insights.",
+      ],
+    },
   },
   {
     image: futureagi,
@@ -538,7 +540,7 @@ const userProfile = {
   certificates,
   portfolioItems,
   devBlogProfileLink,
-  blogs: Blogs
+  blogs: Blogs,
 };
 
 export default userProfile;

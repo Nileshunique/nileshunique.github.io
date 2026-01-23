@@ -2,4 +2,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://nileshunique.github.io/sitemap.xml
+Sitemap: https://nileshcodehub.github.io/sitemap.xml

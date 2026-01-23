@@ -61,7 +61,7 @@ const ContactMe = () => {
             <FaInstagram />
           </Link>
           <Link
-            to={"https://www.linkedin.com/in/nilesh-kumar-692906236/"}
+            to={"https://www.linkedin.com/in/nileshcodehub/"}
             target="_blank"
             className="text-white text-2xl"
           >
