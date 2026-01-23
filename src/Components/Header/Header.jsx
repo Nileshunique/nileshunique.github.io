@@ -1,22 +1,42 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import Logo from "./../../assets/images/nkLogo.webp";
 import { scrollToSection } from "../../utils";
-import resume from "./../../assets/Resume/Nilesh_Resume.pdf";
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   const links = [
     { id: "About", label: "About" },
     { id: "Experience", label: "Experience" },
     { id: "Certificates", label: "Certificates" },
     { id: "Portfolio", label: "Portfolio" },
-    { id: "Blogs", label: "Blogs" },
+    { id: "Blogs", label: "Blogs", path: "/blogs" },
     { id: "ContactMe", label: "Contact" },
-    { id: "Resume", label: "Resume", link: resume },
+    { id: "Resume", label: "Resume", path: "/resume" },
   ];
+
+  const handleLinkClick = (link) => {
+    if (link.path) {
+      navigate(link.path);
+      setIsMenuOpen(false);
+    } else {
+      if (location.pathname !== "/") {
+        navigate("/");
+        // Use a small timeout to allow navigation to complete before scrolling
+        setTimeout(() => {
+          scrollToSection(link.id);
+        }, 100);
+      } else {
+        scrollToSection(link.id);
+      }
+      setIsMenuOpen(false);
+    }
+  };
 
   const linkAnimation = {
     hidden: { opacity: 0, y: -20 },
@@ -24,7 +44,7 @@ function Header() {
   };
 
   return (
-    <div className="mb-8 fixed top-0 right-0 left-0 !z-50">
+    <div className="mb-8 fixed top-0 right-0 left-0 z-50!">
       <motion.header
         className="bg-neutral-800 z-50 w-full p-0 flex justify-between items-center"
         initial={{ y: -80, opacity: 0 }}
@@ -33,7 +53,13 @@ function Header() {
       >
         {/* Logo */}
         <motion.div
-          onClick={() => scrollToSection("Home")}
+          onClick={() => {
+            if (location.pathname !== "/") {
+              navigate("/");
+            } else {
+              scrollToSection("Home");
+            }
+          }}
           className="text-2xl font-bold text-yellow-500 py-2 px-4"
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}
@@ -59,21 +85,10 @@ function Header() {
                     color: "#facc15",
                     textDecoration: "underline",
                   }}
-                  className="cursor-pointer"
-                  onClick={() => !link.link && scrollToSection(link.id)}
+                  className="cursor-pointer text-white font-medium"
+                  onClick={() => handleLinkClick(link)}
                 >
-                  {link.link ? (
-                    <a
-                      className="hover:text-yellow-500 hover:underline"
-                      href={link.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      {link.label}
-                    </a>
-                  ) : (
-                    link.label
-                  )}
+                  {link.label}
                 </motion.div>
               </motion.li>
             ))}
@@ -82,7 +97,7 @@ function Header() {
 
         {/* Mobile Toggle */}
         <button
-          className="md:hidden pr-4"
+          className="md:hidden pr-4 text-white"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
           {isMenuOpen ? <X /> : <Menu />}
@@ -114,23 +129,10 @@ function Header() {
                       color: "#facc15",
                       textDecoration: "underline",
                     }}
-                    className="cursor-pointer"
-                    onClick={() => {
-                      !link.link && scrollToSection(link.id);
-                      setIsMenuOpen(false);
-                    }}
+                    className="cursor-pointer text-white"
+                    onClick={() => handleLinkClick(link)}
                   >
-                    {link.link ? (
-                      <a
-                        href={link.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        {link.label}
-                      </a>
-                    ) : (
-                      link.label
-                    )}
+                    {link.label}
                   </motion.div>
                 </motion.li>
               ))}
